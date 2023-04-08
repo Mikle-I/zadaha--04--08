@@ -1,0 +1,35 @@
+Код выводит:
+
+Bad: undefined
+Bad: undefined
+Bad: undefined
+Bad: undefined
+// потерян контекст (из-за использования var)поэтому код не работает
+
+мои решения:
+1) меняем обзначение переменной var на let 
+const arr = [10, 12, 15, 21];
+for ( let i = 0; i < arr.length; i++) {
+ 
+  setTimeout(function () {
+    console.log(arr[i]> 13 ? `Good: ${arr[i]}` : `Bad: ${arr[i]}`);
+  }, 3000);
+}
+2) не обозначем переменную не var не let, а используем переменную let num + выносим тернарнарный оператор из setTimeout
+const arr = [10, 12, 15, 21];
+for (i = 0; i < arr.length; i++) {
+  let num = arr[i];
+  let log = num > 13 ? `Good: ${num}` : `Bad: ${num}`;
+  setTimeout(function () {
+    console.log(log);
+  }, 3000);
+}
+3) используем  метод перевбора массива forEach + тернарнарный оператор вынес из setTimeout
+ + setTimeout скореткировал так чтобы каждый элемент массива появляся через 3 секунды после предидущего.
+const arrr = [10, 12, 15, 21];
+arrr.forEach((item, index) => {
+  let log = item > 13 ? `Good: ${item}` : `Bad: ${item}`;
+  setTimeout(() => {
+    console.log(log);
+  }, 3000 * index);
+});
