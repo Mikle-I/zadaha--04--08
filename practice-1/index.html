@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/normolize.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <title>Practice--1</title>
+  </head>
+  <body>
+    <div class="setPartners">Стать партнером</div>
+    <div class="modal--ten noVisible">
+      <form class="modal" method="post">
+        <h3 class="modal__h">Регистрация</h3>
+        <div class="modal__flex--all">
+          <div class="modal__flex--row modal__blockInputPhoto">
+            <div class="modal__flex--column">
+              <div>
+                <input
+                  type="text"
+                  class="modal__input--min in"
+                  required
+                  minlength="3"
+                />
+                <div class="modal__input--label">
+                  <div class="redS">✱</div>
+                  Название организации
+                </div>
+              </div>
+              <div>
+                <input
+                  type="tel"
+                  class="modal__input--min in"
+                  required
+                  pattern="[78][0-9]{10}"
+                  placeholder="8999999999"
+                  maxlength="11"
+                />
+                <div class="modal__input--label">
+                  <div class="redS">✱</div>
+                  Телефон
+                </div>
+              </div>
+              <div>
+                <input
+                  type="email"
+                  class="modal__input--min in"
+                  required
+                  placeholder=" "
+                />
+                <div class="modal__input--label">
+                  <div class="redS">✱</div>
+                  E-mail
+                </div>
+              </div>
+            </div>
+            <div class="input__foto">
+              <img
+                id="image1"
+                src="./img/Ellipse 44.png"
+                alt="аватар"
+                class="modal__input--img"
+              />
+              <div class="modal__imgExit">
+                <img src="./img/Icon.png" alt="Удалить" />
+              </div>
+              <div class="modal__imgFail">
+                <img
+                  src="./img/Vector.png"
+                  alt=""
+                  class="modal__imgFail--img avaLabel"
+                />
+                <div class="avaLabel">
+                  Выберите<br />
+                  файл
+                </div>
+                <input type="file" name="f" class="input__file in" id="file1" />
+              </div>
+            </div>
+          </div>
+          <div style="display: flex; width: 100%; justify-content: center">
+            <select
+              id="selcolor"
+              class="modal__input--big modal__select in"
+              required
+            >
+              <option></option>
+              <option value="Maroon">Экология</option>
+
+              <option value="Green">Промышленность</option>
+
+              <option value="Yellow">Услуги</option>
+
+              <option value="Blue">Другое</option>
+            </select>
+
+            <div class="modal__input--labelBig">
+              <div class="redS">✱</div>
+              Деятельность
+            </div>
+          </div>
+          <div style="display: flex; width: 100%; justify-content: center">
+            <input
+              type="text"
+              class="modal__input--big in mob"
+              placeholder="Ваш сайт"
+            />
+            <img src="./img/sait.png" alt="" class="modal__input--icon" />
+          </div>
+          <button type="submit" class="modal__buttReg">
+            <p class="modal__buttReg--text">Зарегистрироваться</p>
+          </button>
+          <div class="modal__buttCancel">Отменить</div>
+        </div>
+      </form>
+      <div class="overlay"></div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
