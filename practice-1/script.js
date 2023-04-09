@@ -20,7 +20,8 @@ let inputi = document.querySelectorAll(".in");
 
 cancel.onclick = function () {
   inputi.forEach((elem) => (elem.value = ""));
-
+  modal.classList.toggle("noVisible");
+  setP.classList.toggle("noVisible");
   document.getElementById("image1").setAttribute("src", "./img/Ellipse 44.png");
   let arr = document.querySelectorAll(".avaLabel");
   arr.forEach((elem) => elem.classList.remove("noVisible"));
