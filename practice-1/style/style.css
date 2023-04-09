@@ -36,6 +36,17 @@
   background: rgba(0, 0, 0, 0.7);
   z-index: 100;
   top: 0;
+  opacity: 0;
+  animation: opa 1.7s forwards;
+}
+
+@keyframes opa {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .modal {
@@ -205,6 +216,9 @@
 .modal__select {
   width: 77.4%;
   cursor: pointer;
+  appearance: none;
+  background: url(icon-color.png) no-repeat right;
+  background-position-x: calc(100% - 15px);
 }
 .modal__input--icon {
   position: absolute;
@@ -303,7 +317,7 @@
     margin-left: -42px;
   }
   .modal__input--labelBig {
-    margin-left: -35%;
+    margin-left: -14rem;
     position: absolute;
     margin-top: 35px;
     display: flex;
@@ -326,7 +340,7 @@
     height: 18px;
     width: 18px;
     margin-top: 55px;
-    margin-right: -45%;
+    margin-right: -19rem;
   }
   .modal__input--min {
     width: 300px;
